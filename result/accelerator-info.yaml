@@ -1,0 +1,22 @@
+id: e9f7a714-a197-4861-8d26-469e42d43b1d
+timestamp: 2023-11-01T14:42:14.752Z
+source: TAP-GUI
+username: tfynes-pivotal
+accelerator:
+  name: tanzu-java-web-app
+fragments:
+  - name: build-wrapper-gradle
+  - name: build-wrapper-maven
+  - name: devcontainer
+  - name: java-version
+  - name: tap-workload
+options:
+  bsGitBranch: main
+  projectName: tj17
+  buildTool: maven
+  springBootVersion: 3.1
+  nativeBuild: false
+  javaVersion: 17
+  includeBuildToolWrapper: true
+  includeDevContainer: false
+  bsGitRepository: github.com?owner=tfynes-pivotal&repo=tj17
