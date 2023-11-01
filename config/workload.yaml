@@ -2,9 +2,9 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   name: tj17
+  namespace: default
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
     app.kubernetes.io/part-of: tj17
 spec:
@@ -12,6 +12,12 @@ spec:
     env:
       - name: BP_JVM_VERSION
         value: "17"
+  env:
+  - name: foo
+    valueFrom: 
+      secretKeyRef:
+        name: my-secret
+        key: foo
   params:
   - name: annotations
     value:
