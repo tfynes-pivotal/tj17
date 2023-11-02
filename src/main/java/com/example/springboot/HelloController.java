@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
 
-   @Value("${foo}")
+   @Value("${DSC_SALT}")
    private String foo;
 
 
