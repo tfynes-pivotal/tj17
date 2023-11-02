@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloController {
 
    @Value("${dsc}")
-   private String foo;
+   private String dsc;
 
 
 
 
 	@RequestMapping("/")
 	public String index() {
-		return "Tanzu ! " + foo;
+		return "Tanzu ! " + dsc;
 	}
 
 }
