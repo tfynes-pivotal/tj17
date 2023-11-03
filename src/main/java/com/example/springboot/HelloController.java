@@ -15,7 +15,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		String s = System.getProperty("fooval");
+		String s = System.getenv("fooval");
 		return "foobean = " + fooval + " s = " + s;
 	}
 
