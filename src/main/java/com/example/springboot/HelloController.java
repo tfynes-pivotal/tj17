@@ -7,15 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
 
-   @Value("${bar}")
-   private String dsc;
+   @Value("${fooval}")
+   private String fooval;
 
 
 
 
 	@RequestMapping("/")
 	public String index() {
-		return "Tanzu!  " + dsc;
+		String s = System.getProperty("fooval");
+		return "foobean = " + fooval + " s = " + s;
 	}
 
 }
