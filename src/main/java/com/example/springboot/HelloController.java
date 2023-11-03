@@ -17,7 +17,8 @@ public class HelloController {
 	public String index() {
 		String s = System.getenv("fooval");
 		String s2 = System.getenv("test.var");
-		return "foobean = " + fooval + " s = " + s + " s2 = " + s2;
+		String s3 = System.getenv("bar.val");
+		return "foobean = " + fooval + " s = " + s + " s2 = " + s2 + " s3= " + s3;
 	}
 
 }
